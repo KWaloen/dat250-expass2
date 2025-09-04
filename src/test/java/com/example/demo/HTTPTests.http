@@ -57,7 +57,7 @@ Content-Type: application/json
 
 {
   "userId": "ca3dfed2-71a9-4d1f-8f42-44cdddeca170",
-  "pollId": "82ebf1f6-0375-4802-a40c-b89df1df6e69",
+  "pollId": "0492ea12-4d66-4db0-a572-febc1270206e",
   "voteOptionId": "73ef6632-20ad-463b-9955-0738601e3f17"
 }
 
@@ -79,7 +79,7 @@ Content-Type: application/json
 
 {
   "userId": "ca3dfed2-71a9-4d1f-8f42-44cdddeca170",
-  "pollId": "e79d9104-d2e5-4a87-8fc3-927839659f29",
+  "pollId": "0b86859b-ac40-46fc-a836-da1028884bac",
   "voteOptionId": "ceb7e0a5-fff3-47f6-95fc-01feb608f661"
 }
 
@@ -105,7 +105,7 @@ Content-Type: application/json
 
 ###POST Delete poll
 
-POST http://localhost:8080/polls/deletePoll/ee3c71c8-6ed7-42ee-a4f4-8b834a83eacc
+POST http://localhost:8080/polls/deletePoll/0b86859b-ac40-46fc-a836-da1028884bac
 Content-Type: application/json
 
 ###GET List votes

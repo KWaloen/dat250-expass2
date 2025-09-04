@@ -62,6 +62,18 @@ public class PollManager {
 
     public void deletePoll(UUID pollId) {
         polls.remove(pollId);
+        UUID voteId = getVoteIdFromPollId(pollId);
+        votes.remove(voteId);
+    }
+
+    public UUID getVoteIdFromPollId(UUID pollId) {
+        UUID voteId = null;
+        for (Vote eachVote : votes.values()) {
+            if (eachVote.getPollId().equals(pollId)) {
+                voteId = eachVote.getVoteId();
+            }
+        }
+        return voteId;
     }
 
     public void getVote(UUID voteID) {

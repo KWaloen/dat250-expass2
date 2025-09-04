@@ -23,8 +23,6 @@ public class Vote {
         return voteId;
     }
 
-
-
     public Instant getVotedTime() {
         return votedTime;
     }
