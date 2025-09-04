@@ -1,10 +1,7 @@
 package com.example.demo;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.Instant;
 import java.util.List;
@@ -41,7 +38,14 @@ public class VoteHandler {
         vote.setVotedTime(Instant.now());
 
         pollManager.addVote(voteId, vote);
+        System.out.println(allVotes);
 
         return ResponseEntity.ok(vote);
+    }
+
+    @GetMapping("/allVotes")
+    public ResponseEntity<List<Vote>> getAllVotes() {
+        List<Vote> allVoteList = pollManager.getAllVotes();
+        return ResponseEntity.ok(allVoteList);
     }
 }

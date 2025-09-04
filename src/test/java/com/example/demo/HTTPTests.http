@@ -61,6 +61,17 @@ Content-Type: application/json
   "voteOptionId": "73ef6632-20ad-463b-9955-0738601e3f17"
 }
 
+###POST User votes
+
+POST http://localhost:8080/votes/castVote
+Content-Type: application/json
+
+{
+  "userId": "d582ba25-e12e-49fb-a703-ffe53671544d",
+  "pollId": "e3bb00ba-52c6-4fad-9fef-41f5a406cff7",
+  "voteOptionId": "73ef6632-20ad-463b-9955-0738601e3f17"
+}
+
 ###POST User votes for another choice - should overwrite vote ID and change only voteOptionId
 
 POST http://localhost:8080/votes/castVote
@@ -71,3 +82,9 @@ Content-Type: application/json
   "pollId": "e79d9104-d2e5-4a87-8fc3-927839659f29",
   "voteOptionId": "ceb7e0a5-fff3-47f6-95fc-01feb608f661"
 }
+
+###GET Get all votes
+
+GET http://localhost:8080/votes/allVotes
+Content-Type: application/json
+
