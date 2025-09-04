@@ -1,14 +1,30 @@
 package com.example.demo;
 
 import java.time.Instant;
+import java.util.Set;
+import java.util.UUID;
 
 public class Poll {
     private String question;
+    private UUID pollId;
+    private Set<VoteOption> voteOptions;
     private Instant publishedAt;
     private Instant validUntil;
 
-    public Poll(String question) {
+    public Poll() {}
+
+    public Poll(String question, Set<VoteOption> voteOptions, UUID pollId) {
         this.question = question;
+        this.voteOptions = voteOptions;
+        this.pollId = pollId;
+    }
+
+    public UUID getPollId() {
+        return pollId;
+    }
+
+    public void setPollId(UUID pollId) {
+        this.pollId = pollId;
     }
 
     public String getQuestion() {
@@ -33,5 +49,9 @@ public class Poll {
 
     public void setValidUntil(Instant validUntil) {
         this.validUntil = validUntil;
+    }
+
+    public void setVoteOptions(Set<VoteOption> voteOptions) {
+        this.voteOptions = voteOptions;
     }
 }
