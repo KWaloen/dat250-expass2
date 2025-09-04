@@ -30,3 +30,22 @@ Content-Type: application/json
 
 GET http://localhost:8080/users/allUsers
 Content-Type: application/json
+
+###POST User creates Poll
+
+POST http://localhost:8080/polls/createPoll
+Content-Type: application/json
+
+{
+  "question": "What is a better letter?",
+  "voteOptions": [
+    { "caption": "A", "presentationOrder": 1 },
+    { "caption": "B", "presentationOrder": 2 }
+  ],
+  "publishedBy": "73ef6632-20ad-463b-9955-0738601e3f17"
+}
+
+###GET all polls
+
+GET http://localhost:8080/polls/allPolls
+Content-Type: application/json

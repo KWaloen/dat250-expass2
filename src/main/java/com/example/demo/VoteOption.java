@@ -19,8 +19,8 @@ public class VoteOption {
         return voteOptionId;
     }
 
-    public void setVoteOptionId(UUID voteOptionId) {
-        this.voteOptionId = voteOptionId;
+    public void setVoteOptionId() {
+        this.voteOptionId = UUID.randomUUID();
     }
 
     public String getCaption() {

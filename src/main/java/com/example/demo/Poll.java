@@ -9,6 +9,7 @@ public class Poll {
     private UUID pollId;
     private Set<VoteOption> voteOptions;
     private Instant publishedAt;
+    private UUID publishedBy;
     private Instant validUntil;
 
     public Poll() {}
@@ -21,6 +22,18 @@ public class Poll {
 
     public UUID getPollId() {
         return pollId;
+    }
+
+    public Set<VoteOption> getVoteOptions() {
+        return voteOptions;
+    }
+
+    public UUID getPublishedBy() {
+        return publishedBy;
+    }
+
+    public void setPublishedBy(UUID publishedBy) {
+        this.publishedBy = publishedBy;
     }
 
     public void setPollId(UUID pollId) {

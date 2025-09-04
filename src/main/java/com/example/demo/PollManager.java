@@ -2,10 +2,7 @@ package com.example.demo;
 
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Component
 public class PollManager {
@@ -16,8 +13,8 @@ public class PollManager {
 
     public PollManager() {}
 
-    public void addPoll(Poll poll) {
-        polls.put(poll.getPollId(), poll);
+    public void addPoll(UUID uuid, Poll poll) {
+        polls.put(uuid, poll);
     }
 
     public void addUser(UUID uuid, User user) {
@@ -35,11 +32,19 @@ public class PollManager {
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<User>();
         for (HashMap.Entry<UUID, User> eachUser : users.entrySet()) {
-            UUID userID = eachUser.getKey();
             User user = eachUser.getValue();
             userList.add(user);
         }
         return userList;
+    }
+
+    public List<Poll> getAllPolls() {
+        List<Poll> pollList = new ArrayList<Poll>();
+        for (HashMap.Entry<UUID, Poll> eachPoll : polls.entrySet()) {
+            Poll poll = eachPoll.getValue();
+            pollList.add(poll);
+        }
+        return pollList;
     }
 
     public void addVote(Vote vote) {
