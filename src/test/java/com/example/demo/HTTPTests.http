@@ -58,5 +58,5 @@ Content-Type: application/json
 {
   "userId": "ca3dfed2-71a9-4d1f-8f42-44cdddeca170",
   "pollId": "e79d9104-d2e5-4a87-8fc3-927839659f29",
-  "voteOptionId": "892472f1-0b09-46b2-9ff0-5afe550b2ace"
+  "voteOptionId": "73ef6632-20ad-463b-9955-0738601e3f17"
 }

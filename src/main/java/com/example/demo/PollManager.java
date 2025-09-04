@@ -51,8 +51,8 @@ public class PollManager {
         votes.put(vote.getVoteId(), vote);
     }
 
-    public void getVote(Vote vote) {
-        votes.get(vote.getVoteId());
+    public void getVote(UUID voteID) {
+        votes.get(voteID);
     }
 
     public void addVoteOption(VoteOption voteOption) {

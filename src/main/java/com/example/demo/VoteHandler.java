@@ -21,8 +21,14 @@ public class VoteHandler {
 
     @PostMapping("/castVote")
     public ResponseEntity<Vote> castVote(@RequestBody Vote vote) {
-
         UUID voteID = UUID.randomUUID();
+
+        if (vote.getVoteId() != null && vote.getUserId() != null) {
+            if (pollManager.getVotes().containsKey(vote.getVoteId())){
+                voteID = vote.getVoteId();
+            }
+        }
+
         vote.setVoteId(voteID);
         vote.setVotedTime(Instant.now());
 
