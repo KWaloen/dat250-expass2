@@ -60,6 +60,10 @@ public class PollManager {
         votes.put(vote.getVoteId(), vote);
     }
 
+    public void deletePoll(UUID pollId) {
+        polls.remove(pollId);
+    }
+
     public void getVote(UUID voteID) {
         votes.get(voteID);
     }

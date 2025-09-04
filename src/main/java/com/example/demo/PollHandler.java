@@ -42,4 +42,10 @@ public class PollHandler {
         return ResponseEntity.ok(allPollList);
     }
 
+    @PostMapping("/deletePoll/{pollId}")
+    public ResponseEntity<Poll> deletePoll(@PathVariable UUID pollId) {
+        pollManager.deletePoll(pollId);
+        return ResponseEntity.ok().build();
+    }
+
 }

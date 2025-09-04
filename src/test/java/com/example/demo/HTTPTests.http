@@ -88,3 +88,22 @@ Content-Type: application/json
 GET http://localhost:8080/votes/allVotes
 Content-Type: application/json
 
+###POST User creates Poll with fixed pollId
+
+POST http://localhost:8080/polls/createPoll
+Content-Type: application/json
+
+{
+  "question": "What is a better letter?",
+  "pollId": "36da6134-6855-4469-a724-ff6a15d0123b",
+  "voteOptions": [
+    { "caption": "A", "presentationOrder": 1 },
+    { "caption": "B", "presentationOrder": 2 }
+  ],
+  "publishedBy": "73ef6632-20ad-463b-9955-0738601e3f17"
+}
+
+###POST Delete poll
+
+POST http://localhost:8080/polls/deletePoll/b9e3d074-845e-4110-a6de-cb57bec968d8
+Content-Type: application/json
