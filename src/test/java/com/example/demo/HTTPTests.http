@@ -60,3 +60,14 @@ Content-Type: application/json
   "pollId": "e79d9104-d2e5-4a87-8fc3-927839659f29",
   "voteOptionId": "73ef6632-20ad-463b-9955-0738601e3f17"
 }
+
+###POST User votes for another choice - should overwrite vote ID and change only voteOptionId
+
+POST http://localhost:8080/votes/castVote
+Content-Type: application/json
+
+{
+  "userId": "ca3dfed2-71a9-4d1f-8f42-44cdddeca170",
+  "pollId": "e79d9104-d2e5-4a87-8fc3-927839659f29",
+  "voteOptionId": "ceb7e0a5-fff3-47f6-95fc-01feb608f661"
+}

@@ -47,6 +47,15 @@ public class PollManager {
         return pollList;
     }
 
+    public List<Vote> getAllVotes() {
+        List<Vote> voteList = new ArrayList<Vote>();
+        for (HashMap.Entry<UUID, Vote> eachVote : votes.entrySet()) {
+            Vote vote = eachVote.getValue();
+            voteList.add(vote);
+        }
+        return voteList;
+    }
+
     public void addVote(UUID VoteID, Vote vote) {
         votes.put(vote.getVoteId(), vote);
     }

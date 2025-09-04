@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.Instant;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -21,18 +22,25 @@ public class VoteHandler {
 
     @PostMapping("/castVote")
     public ResponseEntity<Vote> castVote(@RequestBody Vote vote) {
-        UUID voteID = UUID.randomUUID();
+        UUID voteId = null;
+        UUID userId = vote.getUserId();
+        UUID pollId = vote.getPollId();
+        List<Vote> allVotes = pollManager.getAllVotes();
 
-        if (vote.getVoteId() != null && vote.getUserId() != null) {
-            if (pollManager.getVotes().containsKey(vote.getVoteId())){
-                voteID = vote.getVoteId();
+        for (Vote eachVote : allVotes) {
+            if (userId.equals(eachVote.getUserId()) && pollId.equals(eachVote.getPollId())) {
+                 voteId = eachVote.getVoteId();
+                 break;
             }
         }
+        if (voteId == null) {
+            voteId = UUID.randomUUID();
+        }
 
-        vote.setVoteId(voteID);
+        vote.setVoteId(voteId);
         vote.setVotedTime(Instant.now());
 
-        pollManager.addVote(voteID, vote);
+        pollManager.addVote(voteId, vote);
 
         return ResponseEntity.ok(vote);
     }
