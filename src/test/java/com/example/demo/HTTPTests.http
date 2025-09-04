@@ -1,0 +1,18 @@
+### GET request to example server
+GET http://localhost:8080/
+
+### Expected result "Hello World!"
+
+### POST request to localhost to createUser
+
+POST http://localhost:8080/users/createUser
+Content-Type: application/json
+
+{
+  "userId": "48c40116-c0e2-428e-baef-e742a3598f14",
+  "username": "bob",
+  "email": "bob@bobinson.com",
+  "password": "supersecurePassword",
+  "createdPolls": null
+}
+

@@ -6,8 +6,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class Expass2ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void createNewUser() {
+        
+    }
 
 }
