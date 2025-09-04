@@ -1,5 +1,9 @@
 package com.example.demo;
 
+
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class User {
@@ -7,12 +11,14 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private List<Poll> createdPolls;
 
     public User(UUID userId, String username, String password, String email) {
         this.userId = userId;
         this.username = username;
         this.password = password;
         this.email = email;
+        this.createdPolls = new ArrayList<>();
     }
 
     public User() {}
@@ -48,5 +54,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public List<Poll> getCreatedPolls() {
+        return createdPolls;
+    }
+
+    public void setCreatedPolls(List<Poll> createdPolls) {
+        this.createdPolls = createdPolls;
     }
 }

@@ -1,8 +1,12 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.UUID;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PollManager {
     private final HashMap <UUID, Poll> polls = new HashMap<>();
     private final HashMap <UUID, User> users = new HashMap<>();

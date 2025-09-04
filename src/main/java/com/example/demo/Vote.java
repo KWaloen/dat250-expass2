@@ -10,12 +10,11 @@ public class Vote {
     private Instant publishedAt;
     private VoteOption voteOption;
 
-    public Vote(UUID voteID, User user, Poll poll, VoteOption voteOption) {
+    public Vote(UUID voteID, User user, Poll poll) {
         this.voteId = voteID;
         this.user = user;
         this.poll = poll;
         this.publishedAt = poll.getPublishedAt();
-        this.voteOption = voteOption;
     }
 
     public Vote() {}
@@ -42,14 +41,6 @@ public class Vote {
 
     public void setPoll(Poll poll) {
         this.poll = poll;
-    }
-
-    public VoteOption getVoteOption() {
-        return voteOption;
-    }
-
-    public void setVoteOption(VoteOption voteOption) {
-        this.voteOption = voteOption;
     }
 
     public Instant getPublishedAt() {
