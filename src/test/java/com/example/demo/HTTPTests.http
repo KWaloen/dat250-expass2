@@ -49,3 +49,14 @@ Content-Type: application/json
 
 GET http://localhost:8080/polls/allPolls
 Content-Type: application/json
+
+###POST User votes
+
+POST http://localhost:8080/votes/castVote
+Content-Type: application/json
+
+{
+  "userId": "ca3dfed2-71a9-4d1f-8f42-44cdddeca170",
+  "pollId": "e79d9104-d2e5-4a87-8fc3-927839659f29",
+  "voteOptionId": "892472f1-0b09-46b2-9ff0-5afe550b2ace"
+}

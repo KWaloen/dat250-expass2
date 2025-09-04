@@ -47,7 +47,7 @@ public class PollManager {
         return pollList;
     }
 
-    public void addVote(Vote vote) {
+    public void addVote(UUID VoteID, Vote vote) {
         votes.put(vote.getVoteId(), vote);
     }
 

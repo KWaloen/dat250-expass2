@@ -5,16 +5,16 @@ import java.util.UUID;
 
 public class Vote {
     private UUID voteId;
-    private User user;
-    private Poll poll;
-    private Instant publishedAt;
-    private VoteOption voteOption;
+    private UUID userId;
+    private UUID pollId;
+    private Instant votedTime;
+    private UUID voteOptionId;
 
-    public Vote(UUID voteID, User user, Poll poll) {
+    public Vote(UUID voteID, UUID userId, UUID pollId, UUID voteOptionId) {
         this.voteId = voteID;
-        this.user = user;
-        this.poll = poll;
-        this.publishedAt = poll.getPublishedAt();
+        this.userId = userId;
+        this.pollId = pollId;
+        this.voteOptionId = voteOptionId;
     }
 
     public Vote() {}
@@ -23,31 +23,41 @@ public class Vote {
         return voteId;
     }
 
+
+
+    public Instant getVotedTime() {
+        return votedTime;
+    }
+
+    public void setVotedTime(Instant votedTime) {
+        this.votedTime = votedTime;
+    }
+
+    public UUID getPollId() {
+        return pollId;
+    }
+
+    public void setPollId(UUID pollId) {
+        this.pollId = pollId;
+    }
+
+    public UUID getUserId() {
+        return userId;
+    }
+
+    public void setUserId(UUID userId) {
+        this.userId = userId;
+    }
+
     public void setVoteId(UUID voteId) {
         this.voteId = voteId;
     }
 
-    public User getUser() {
-        return user;
+    public UUID getVoteOptionId() {
+        return voteOptionId;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public Poll getPoll() {
-        return poll;
-    }
-
-    public void setPoll(Poll poll) {
-        this.poll = poll;
-    }
-
-    public Instant getPublishedAt() {
-        return publishedAt;
-    }
-
-    public void setPublishedAt(Instant publishedAt) {
-        this.publishedAt = publishedAt;
+    public void setVoteOptionId(UUID voteOptionId) {
+        this.voteOptionId = voteOptionId;
     }
 }
