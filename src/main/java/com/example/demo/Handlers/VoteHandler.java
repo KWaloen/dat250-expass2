@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.Handlers;
 
+import com.example.demo.Models.Vote;
+import com.example.demo.DomainManager.PollManager;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

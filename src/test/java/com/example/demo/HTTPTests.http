@@ -105,7 +105,10 @@ Content-Type: application/json
 
 ###POST Delete poll
 
-POST http://localhost:8080/polls/deletePoll/0b86859b-ac40-46fc-a836-da1028884bac
+POST http://localhost:8080/polls/deletePoll/e3bb00ba-52c6-4fad-9fef-41f5a406cff7
 Content-Type: application/json
 
-###GET List votes
+###GET Get all votes
+
+GET http://localhost:8080/votes/allVotes
+Content-Type: application/json

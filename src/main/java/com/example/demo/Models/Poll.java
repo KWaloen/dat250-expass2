@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example.demo.Models;
+
+import com.example.demo.Models.VoteOption;
 
 import java.time.Instant;
 import java.util.Set;

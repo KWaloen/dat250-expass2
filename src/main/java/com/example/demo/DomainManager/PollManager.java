@@ -1,5 +1,9 @@
-package com.example.demo;
+package com.example.demo.DomainManager;
 
+import com.example.demo.Models.Poll;
+import com.example.demo.Models.User;
+import com.example.demo.Models.Vote;
+import com.example.demo.Models.VoteOption;
 import org.springframework.stereotype.Component;
 
 import java.util.*;

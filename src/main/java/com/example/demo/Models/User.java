@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example.demo.Models;
+
+import com.example.demo.Models.Poll;
 
 import java.util.ArrayList;
 import java.util.List;
